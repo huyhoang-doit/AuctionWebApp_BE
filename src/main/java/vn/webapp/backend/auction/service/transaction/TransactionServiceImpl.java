@@ -42,6 +42,11 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     @Override
+    public Transaction getWinnerTransactionByAuctionId(Integer auctionId) {
+        return transactionRepository.findWinnerTransactionByAuctionId(auctionId);
+    }
+
+    @Override
     public UserTransactionResponse getTransactionsDashboardByUsername(String username) {
         Integer numberRegistration = transactionRepository.getCountTransactionsRegistrationByUsername(username);
         Double totalPriceJewelryWonByUsername = transactionRepository.getTotalPriceJewelryWonByUsername(username);

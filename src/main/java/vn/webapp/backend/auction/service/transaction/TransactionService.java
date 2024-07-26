@@ -9,11 +9,14 @@ import vn.webapp.backend.auction.model.Transaction;
 import vn.webapp.backend.auction.model.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface TransactionService {
     List<Transaction> getAll();
 
     Transaction getTransactionById(Integer id);
+
+    Transaction getWinnerTransactionByAuctionId(Integer auctionId);
 
     UserTransactionResponse getTransactionsDashboardByUsername(String username);
 

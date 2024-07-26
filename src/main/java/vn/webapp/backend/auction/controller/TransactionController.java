@@ -42,6 +42,11 @@ public class TransactionController {
         return ResponseEntity.ok(transactionService.getTransactionsDashboardByUsername(username));
     }
 
+    @GetMapping("/get-winner-auction/{auctionId}")
+    public ResponseEntity<Transaction> getWinnerTransactionByAuctionId(@PathVariable Integer auctionId) {
+        return ResponseEntity.ok(transactionService.getWinnerTransactionByAuctionId(auctionId));
+    }
+
     @GetMapping("/get-by-username")
     public ResponseEntity<Page<Transaction>> getAuctionHistoryByUsername(
             @RequestParam(defaultValue = "createDate") String sortBy,

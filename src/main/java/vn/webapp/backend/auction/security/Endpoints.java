@@ -33,6 +33,7 @@ public final class Endpoints {
 
     public static final String[] STAFF_GET_ENDPOINTS = {
             "/api/v1/user/get-user-registration/**",
+            "/api/v1/transaction/get-winner-auction/**"
     };
 
     public static final String[] MANAGER_GET_ENDPOINTS = {
